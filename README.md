@@ -20,9 +20,9 @@ We are going to implement an user interface which takes signs as input from the 
 
 User stories:
 
--As a doctor, I want to provide a proper  medication to the patients by understanding their problems  correctly which can be provided by using the sign language converter .
--As a user, I want people around me to understand my sign language by translating it into readable note.
--As a user I want to understand what a person with speech disability wants to communicate.
+- As a doctor, I want to provide a proper  medication to the patients by understanding their problems  correctly which can be provided by using the sign language converter.
+- As a user, I want people around me to understand my sign language by translating it into readable note.
+- As a user I want to understand what a person with speech disability wants to communicate.
 
 
 ##Architecture Diagram
