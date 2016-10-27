@@ -1,6 +1,6 @@
 # Fall16-Team23
 
-#Project Name
+#SignComm
 
 ##Abstract
 Problem:
@@ -12,11 +12,18 @@ Natural Language channel such as words,script or body language such as gestures(
 Solution:
 
 
-We are going to implement an user interface which takes signs as input from the disabled people either by capturing the images or by sensors.These inputs are interpreted using existing algorithms and processed as symbols of a language from our database.We are going to take American Sign Language as reference.The user will be able to understand with the help of these symbols.And we name our application as Trans-Sense.
+We are going to implement an user interface which takes signs as input from the disabled people either by capturing the images or by sensors.These inputs are interpreted using existing algorithms and processed as symbols of a language from our database.We are going to take American Sign Language as reference.The user will be able to understand with the help of these symbols.And we name our application as "SignComm".
 
 ##User Stories
 
 ![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/1.png)
+
+User stories:
+
+-As a doctor, I want to provide a proper  medication to the patients by understanding their problems  correctly which can be provided by using the sign language converter .
+-As a user, I want people around me to understand my sign language by translating it into readable note.
+-As a user I want to understand what a person with speech disability wants to communicate.
+
 
 ##Architecture Diagram
 
