@@ -16,7 +16,7 @@ We are going to implement an user interface which takes signs as input from the 
 
 ##User Stories
 
-![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/1.png)
+![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/usecase.png)
 
 User stories:
 
