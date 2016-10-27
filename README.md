@@ -6,7 +6,7 @@
 
 ##User Stories
 
-![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/issues/14?raw=true)
+![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/1.png)
 
 ##Architecture Diagram
 
