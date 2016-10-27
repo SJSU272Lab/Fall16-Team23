@@ -27,4 +27,6 @@ User stories:
 
 ##Architecture Diagram
 
+![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/architecture.png)
+
 ![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/flowchart.png)
