@@ -4,63 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-// New Code
-var mongo = require('mongodb');
-var monk = require('monk');
-//var db = monk('ec2-user@54.174.47.2:27017/leapmotion');
-
-//var MongoClient = require('mongodb').MongoClient
-//   , assert = require('assert');
-
-// // Connection URL
-// var url = 'mongodb://leapmotionadmin:signcomm2016@172.31.22.71:27017/leapmotion';
-// // var url = 'mongodb://localhost:27017/nodetest1';
-// // Use connect method to connect to the Server
-// MongoClient.connect(url, function(err, db) {
-//   assert.equal(null, err);
-//   console.log("Connected correctly to server");
-
-//   db.close();
-// });
-
-var MongoClient = require('mongodb').MongoClient
-  , fs = require('fs');
-
-// Read the certificate authority
-// var ca = [fs.readFileSync(__dirname + "/ssl/LeapMotionFinal.pem")];
-
-// Connect validating the returned certificates from the server
-// MongoClient.connect("mongodb://ec2-54-174-47-2.compute-1.amazonaws.com/leapmotion?ssl=true", {
-//   server: {
-//       sslValidate:true
-//     , sslCA:ca
-//   }
-// }, function(err, db) {
-// console.log(err);
-//   db.close();
-// });
-
-//var db = monk('localhost:27017/nodetest1');
-
-var http = require('http'),
-    fs = require('fs');
-
-
-fs.readFile('./SignCommController.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(8000);
-});
-
-
 var index = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -68,22 +12,15 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Make our db accessible to our router
-// app.use(function(req,res,next){
-//     req.db = db;
-//     next();
-// });
-
 app.use('/', index);
-app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
