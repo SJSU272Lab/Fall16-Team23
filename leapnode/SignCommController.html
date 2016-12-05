@@ -118,7 +118,7 @@ body  {
 function getGestureData(actionMade){      
     $.ajax({
         type: "GET",
-        url:"http://localhost:3000/helloworld",
+        url:"http://localhost:3000/controller",
         dataType: 'text',
         contentType: "text/plain",
         data: {actionMade: actionMade},

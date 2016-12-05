@@ -36,30 +36,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-  
-
 console.log("Scanning Gestures table.");
-
-
-// function onScan(err, data) {
-//     if (err) {
-//         console.error("Unable to scan the table. Error JSON:", JSON.stringify(err, null, 2));
-//     } else {
-//         // print all the movies
-//         console.log("Scan succeeded.");
-//         data.Items.forEach(function(gesture) {
-//            console.log(
-//                 gesture.gestures);     
-           
-//         });
-
-//         if (typeof data.LastEvaluatedKey != "undefined") {
-//             console.log("Scanning for more...");
-//             params.ExclusiveStartKey = data.LastEvaluatedKey;
-//             docClient.scan(params, onScan);
-//         }
-//     }    
-// }
 
 var scanGestures = function(gId,callback) {
 
@@ -103,8 +80,8 @@ var scanGestures = function(gId,callback) {
 };
 
 
-/* GET Hello World page. */
-router.get('/helloworld', function(req, res) {
+/* GET Controller page. */
+router.get('/controller', function(req, res) {
     var actionMade = req.param("actionMade");
     console.log("actionMade" +actionMade);
     res.header("Access-Control-Allow-Origin", "*");
