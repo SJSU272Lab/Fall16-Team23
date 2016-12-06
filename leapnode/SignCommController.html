@@ -91,7 +91,7 @@ body  {
   position: relative;
 }
 
-#button_style {
+#pause {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
@@ -128,7 +128,7 @@ function getGestureData(actionMade){
 
         },
         error: function(textstatus, errorThrown) {
-            alert('text status ' + textstatus + ', err ' + errorThrown);
+            // alert('text status ' + textstatus + ', err ' + errorThrown);
         }
     });
 } 
@@ -282,12 +282,14 @@ var controllerOptions = {enableGestures: true};
 // to use HMD mode:
 // controllerOptions.optimizeHMD = true;
 
+var readGesture = true;
 Leap.loop(controllerOptions, function(frame) {
   leapAnimate(frame);	
   if (paused) {
     return; // Skip this update
   }
-
+  if (frame.gestures.length && readGesture) {
+   readGesture = false;  
   // Display Frame object data
   var frameOutput = document.getElementById("frameData");
 
@@ -314,7 +316,7 @@ Leap.loop(controllerOptions, function(frame) {
     var scaleFactor = frame.scaleFactor(previousFrame);
     //frameString += "Scale factor: " + scaleFactor.toFixed(2) + "<br />";
   }
-  frameOutput.innerHTML = "<div style='width:300px; float:left; padding:5px'>" + frameString + "</div>";
+  //frameOutput.innerHTML = "<div style='width:300px; float:left; padding:5px'>" + frameString + "</div>";
 
   // Display Hand object data
   var handOutput = document.getElementById("handData");
@@ -419,7 +421,7 @@ Leap.loop(controllerOptions, function(frame) {
                  pinchEndZPosition = pinchStartZPosition;
 			 }
 			 else{
-				 textString = "pinch";
+				  textString = "pinch";
 			 }
 		}
 		else if (fingersPinched && dist_thumb_index > FINGERS_PINCHED_X_AXIS_THRESHOLD){
@@ -618,12 +620,17 @@ Leap.loop(controllerOptions, function(frame) {
   //gestureOutput.innerHTML = gestureString;
  
   // textData.innerHTML = textString;
-  debugData.innerHTML = debugString;
+  //debugData.innerHTML = debugString;
 
   // Store frame for motion functions
   previousFrame = frame;
  
   getGestureData(textString);
+
+ 
+  setTimeout(function() { readGesture = true; }, 800);
+
+  }
 
 })
  
@@ -658,10 +665,10 @@ function pauseForGestures() {
 
 <div id="textareacont">
   <div>
-  <button id="button_style" onclick="togglePause()">Pause</button>
+  <button id="pause" onclick="togglePause()">Pause</button>
   
       <label style="font-size: 2.5em">
-          <input type="checkbox" onclick="pauseForGestures()" width="40px"  height="40px" >
+          <input type="checkbox" id="pauseOnGesture" onclick="pauseForGestures()" width="40px"  height="40px" >
           <span class="cr"><i class="cr-icon fa fa-check"></i></span>
           Pause on gestures
       </label>
