@@ -41,6 +41,9 @@ We are going to implement an user interface which takes signs as input from the 
 ##Flow Diagram
 ![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/flowchart.png)
 
+##Project Presentation
+![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/architecture.png)
+
 ##Team
 https://github.com/ramyamariappan <br>
 https://github.com/Apoorva-Davu<br>
