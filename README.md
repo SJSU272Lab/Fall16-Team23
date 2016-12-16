@@ -43,3 +43,6 @@ We are going to implement an user interface which takes signs as input from the 
 
 ##Team
 https://github.com/ramyamariappan
+https://github.com/Apoorva-Davu
+https://github.com/aaamani
+https://github.com/saisahitya
