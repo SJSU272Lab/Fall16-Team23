@@ -42,7 +42,7 @@ We are going to implement an user interface which takes signs as input from the 
 ![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/flowchart.png)
 
 ##Team
-https://github.com/ramyamariappan
-https://github.com/Apoorva-Davu
-https://github.com/aaamani
+https://github.com/ramyamariappan <br>
+https://github.com/Apoorva-Davu<br>
+https://github.com/aaamani<br>
 https://github.com/saisahitya
