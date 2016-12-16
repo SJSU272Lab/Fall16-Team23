@@ -2,6 +2,9 @@
 
 #SignComm
 
+#App URL : http://localhost:8000/SignCommController.html 
+This needs to be localhost as of now, because the leapmotion sensor is connected to the local machine.
+
 ##Abstract
 ###Problem:
 
