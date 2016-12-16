@@ -41,8 +41,8 @@ We are going to implement an user interface which takes signs as input from the 
 ##Flow Diagram
 ![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/flowchart.png)
 
-##Project Presentation
-![alt tag](https://github.com/SJSU272Lab/Fall16-Team23/blob/master/FinalProject/architecture.png)
+##Project Report
+![alt tag](https://github.com/SJSU272Lab/SignComm/blob/master/FinalProject/SignCommReport-2.pdf)
 
 ##Team
 https://github.com/ramyamariappan <br>
